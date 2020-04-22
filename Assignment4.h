@@ -9,8 +9,9 @@ class Sim{
     int type;
     int entryTime;
     int timeAtWindow;
-    int Median;
-    int Idle;
+    int SCTC; //Student Count/Clock Tick
+    int MEC; //Median Element Count
+    int IEC; //Idle Element Count
   public:
     Sim();
     ~Sim();
