@@ -45,10 +45,10 @@ void GenQueue<T>::insert(T d){
   }
   else{
     rear->next = node;
-    node->prev = back;
+    node->prev = rear;
   }
 
-  back = node;
+  rear = node;
   ++numElements;
 }
 
@@ -88,13 +88,13 @@ T GenQueue<T>::rRear(){
 }
 
 template <class T>
-T GenQueue<T>::printQ(){
+void GenQueue<T>::printQ(){
   ListNode<T> *curr = front;
 
   while(true){
     if(curr != NULL){
       cout << curr->data << endl;
-      cur = curr->next;
+      curr = curr->next;
     }
     else{
       break;
