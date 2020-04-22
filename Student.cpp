@@ -4,7 +4,7 @@ using namespace std;
 
 Student::Student(){
   windowTime = 0;
-  entryTIme = 0;
+  entryTime = 0;
   queueTime = 0;
   idleTime = 0;
 }
@@ -17,5 +17,5 @@ Student::Student(int t, int e){
 }
 
 Student::~Student(){
-  
+
 }
