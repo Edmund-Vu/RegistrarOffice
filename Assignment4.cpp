@@ -33,13 +33,13 @@ bool Sim::importFile(string file){
   iStream.open(file.c_str());
 
   try{
-    getline(inputStream, line);
+    getline(iStream, line);
     totalWindows = atoi(line.c_str());
 
-    windowArray = new Students*[totalWindows];
+    windowArray = new Student*[totalWindows];
 
     for(int i = 0; i < totalWindows; ++i){
-      Students* student = new Student();
+      Student* student = new Student();
       windowArray[i] = student;
     }
     ++lineCount;
@@ -48,7 +48,7 @@ bool Sim::importFile(string file){
     cout << "Error" << endl;
     return false;
   }
-  while(getline(inputStream, line)){
+  while(getline(iStream, line)){
     switch(type){
       case(1): {
         try{
@@ -68,7 +68,7 @@ bool Sim::importFile(string file){
             SCTC = atoi(line.c_str());
 
             for(int i = 0; i < SCTC; ++i){
-              getline(inputStream, line);
+              getline(iStream, line);
               ++lineCount;
 
               try{
@@ -78,8 +78,8 @@ bool Sim::importFile(string file){
                 cout << "Error" << endl;
                 return false;
               }
-              ++totalStudents
-              Students* student = new Student(timeAtWindow, entryTime);
+              ++totalStudents;
+              Student* student = new Student(timeAtWindow, entryTime);
               studentQueue.insert(student);
             }
             --type;
@@ -109,7 +109,7 @@ bool Sim::trackTime(int t){
   }
 
   if(!studentQueue.isEmpty()){
-    ListNode<Students*> *curr = studentQueue.front;
+    ListNode<Student*> *curr = studentQueue.front;
 
     while(curr != NULL){
       if(curr->data->entryTime < t){
@@ -141,7 +141,7 @@ double Sim::meanTime(){
 }
 
 double Sim::medianTime(){
-  ListNode<int> *curr = waitstats.front;
+  ListNode<int> *curr = waitStats.front;
 
   double median = 0;
   MEC = 0;
@@ -226,7 +226,7 @@ double Sim::meanIdleTime(){
 
   while(curr != NULL){
     sum += curr->data;
-    curr = curr->data;
+    curr = curr->next;
     ++n;
   }
 
@@ -239,7 +239,7 @@ double Sim::meanIdleTime(){
   }
 }
 
-int Sim::longestIdleTime(){
+double Sim::longestIdleTime(){
   ListNode<int> *curr = idleStats.front;
   IEC = 0;
 
