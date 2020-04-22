@@ -193,5 +193,81 @@ double Sim::medianTime(){
 }
 
 int Sim::longestTime(){
-  
+  if(MEC == 0){
+    return 0;
+  }
+  else{
+    return medianArray[MEC - 1];
+  }
+}
+
+int Sim::overTenTime(){
+  if(MEC == 0){
+    return 0;
+  }
+  else{
+    int temp = 0;
+
+    for(int i = 0; i < MEC; ++i){
+      if(medianArray[i] > 10){
+        ++temp;
+      }
+    }
+    return temp;
+  }
+}
+
+double Sim::meanIdleTime(){
+  ListNode<int> *curr = idleStats.front;
+
+  double mit = 0;
+  double sum = 0;
+  double n = 0;
+
+  while(curr != NULL){
+    sum += curr->data;
+    curr = curr->data;
+    ++n;
+  }
+
+  if(n == 0){
+    return 0;
+  }
+  else{
+    mit = sum / n;
+    return mit;
+  }
+}
+
+int Sim::longestIdleTime(){
+  ListNode<int> *curr = idleStats.front;
+  IEC = 0;
+
+  while(curr != NULL){
+    curr = curr->next;
+    ++IEC;
+  }
+
+  idleArray = new int[IEC];
+  curr = idleStats.front;
+
+  for(int i = 0; i < IEC; ++i){
+    idleArray[i] = curr->data;
+    curr = curr->next;
+  }
+
+  sort(idleArray, idleArray + IEC);
+
+  return(idleArray[IEC - 1]);
+}
+
+int Sim::idleOverFiveTime(){
+  int temp = 0;
+
+  for(int i = 0; i < IEC; ++i){
+    if(idleArray[i] > 5){
+      ++temp;
+    }
+  }
+  return temp;
 }
