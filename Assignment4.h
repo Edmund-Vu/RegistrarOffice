@@ -16,7 +16,7 @@ class Sim{
     Sim();
     ~Sim();
 
-    bool inportFile(string file);
+    bool importFile(string file);
     bool trackTime(int t);
 
     double meanTime();
@@ -25,13 +25,13 @@ class Sim{
     int overTenTime();
 
     double meanIdleTime();
-    double longestIdleTime():
+    double longestIdleTime();
     int idleOverFiveTime();
 
-    Students* *windowArray;
-    GenQueue<Students*> studentQueue;
+    Student* *windowArray;
+    GenQueue<Student*> studentQueue;
     GenQueue<int> waitStats;
-    Genqueue<int> idleStats;
+    GenQueue<int> idleStats;
 
     int *medianArray;
     int *idleArray;
