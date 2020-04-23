@@ -74,6 +74,11 @@ T DoublyLinkedList<T>::removeFront(){
 }
 
 template <class T>
+T DoublyLinkedList<T>::getFront(){
+  return front->data;
+}
+
+template <class T>
 void DoublyLinkedList<T>::printList(){
   ListNode<T> *curr = front;
   while(true){
@@ -113,5 +118,5 @@ bool DoublyLinkedList<T>::isEmpty(){
 
 template <class T>
 int DoublyLinkedList<T>::getSize(){
-  return size();
+  return size;
 }
