@@ -106,7 +106,7 @@ bool Sim::trackTime(int t){
       windowArray[i]->windowTime--;
     }
     else{
-      windowArray[i]->idleTime--;
+      windowArray[i]->idleTime++;
     }
   }
 
@@ -189,8 +189,7 @@ double Sim::medianTime(){
         return 0;
       }
 
-      d = double(medianArray[a]/double(medianArray[z]));
-
+      d = double(medianArray[a])/double(medianArray[z]);
       return d;
     }
   }
@@ -261,7 +260,6 @@ double Sim::longestIdleTime(){
   }
 
   sort(idleArray, idleArray + IEC);
-
   return(idleArray[IEC - 1]);
 }
 
