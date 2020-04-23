@@ -16,6 +16,17 @@ class Sim{
     Sim();
     ~Sim();
 
+    Student* *windowArray;
+    GenQueue<Student*> studentQueue;
+    GenQueue<int> waitStats;
+    GenQueue<int> idleStats;
+
+    int *medianArray;
+    int *idleArray;
+
+    int totalWindows;
+    int totalStudents;
+
     bool importFile(string file);
     bool trackTime(int t);
     // Stat methods for students
@@ -27,15 +38,4 @@ class Sim{
     double meanIdleTime();
     double longestIdleTime();
     int idleOverFiveTime();
-
-    Student* *windowArray;
-    GenQueue<Student*> studentQueue;
-    GenQueue<int> waitStats;
-    GenQueue<int> idleStats;
-
-    int *medianArray;
-    int *idleArray;
-
-    int totalWindows;
-    int totalStudents;
 };
