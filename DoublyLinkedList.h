@@ -44,10 +44,10 @@ void DoublyLinkedList<T>::insertRear(T d){
   }
   else{
     rear->next = node;
-    node->prev = back;
+    node->prev = rear;
   }
 
-  back = node;
+  rear = node;
   ++size;
 }
 
@@ -91,7 +91,7 @@ void DoublyLinkedList<T>::printList(){
 }
 
 template <class T>
-void DoublyLinkedList<T>::deletePos(int pos){
+int DoublyLinkedList<T>::deletePos(int pos){
   int indx = 0;
   ListNode<T> *curr = front;
   ListNode<T> *prev = front;
