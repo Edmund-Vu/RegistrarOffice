@@ -50,6 +50,7 @@ bool Sim::importFile(string file){
   }
   while(getline(iStream, line)){
     switch(type){
+      // Clock ticks case
       case(1): {
         try{
           entryTime = atoi(line.c_str());
@@ -62,6 +63,7 @@ bool Sim::importFile(string file){
         }
         break;
       }
+      // Student count case
       case(2): {
         try{
           if(line != ""){
@@ -162,8 +164,9 @@ double Sim::medianTime(){
       medianArray[i] = curr->data;
       curr = curr->next;
     }
-
+    // sort (from 'algorithm' library) arranges values in ascending order
     sort(medianArray, medianArray + MEC);
+    // odd count
     if(MEC % 2 == 1){
       double d = 0;
       int r = 0;
@@ -173,6 +176,7 @@ double Sim::medianTime(){
 
       return d;
     }
+    // even count
     else{
       double d = 0;
       int a = 0;
