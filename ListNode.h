@@ -28,6 +28,10 @@ ListNode<T>::ListNode(T d){
 
 template <class T>
 ListNode<T>::~ListNode(){
-  delete next;
-  delete prev;
+  if(next != NULL){
+    next = NULL;
+    prev = NULL;
+    delete next;
+    delete prev;
+  }
 }
