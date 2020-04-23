@@ -59,10 +59,12 @@ T GenQueue<T>::remove(){
 
     T temp = node->data;
 
+    // If it is the only node
     if(front->next == NULL){
       front = NULL;
       rear = NULL;
     }
+    // More than one node
     else{
       front->next->prev = NULL;
       front = front->next;
