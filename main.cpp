@@ -52,7 +52,7 @@ int main(int argc, char** argv){
           s.idleStats.insert(s.windowArray[i]->idleTime);
         }
       }
-
+      // Print the results
       cout << "Mean Student Wait Time: " << s.meanTime() << endl;
       cout << "Median Student Wait Time: " << s.medianTime() << endl;
       cout << "Longest Student Wait Time:" << s.longestTime() << endl;
