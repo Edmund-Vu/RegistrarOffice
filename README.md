@@ -14,6 +14,8 @@ Assignment 4 - Registrar's Office Simulation
 
 - http://www.cplusplus.com/reference/algorithm/sort/
 
+- http://www.cplusplus.com/reference/sstream/stringstream/
+
 #Execution:
 
 1. cd into the folder with the files
