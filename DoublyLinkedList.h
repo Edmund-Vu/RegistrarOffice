@@ -12,9 +12,9 @@ class DoublyLinkedList{
     DoublyLinkedList();
     ~DoublyLinkedList();
 
-    void insertRear(T data);
+    void insert(T data);
     T removeFront();
-    T getFront();
+    T rFront();
 
     void printList();
     int deletePos(int pos);
@@ -36,7 +36,7 @@ DoublyLinkedList<T>::~DoublyLinkedList(){
 }
 
 template <class T>
-void DoublyLinkedList<T>::insertRear(T d){
+void DoublyLinkedList<T>::insert(T d){
   ListNode<T> *node = new ListNode<T>(d);
 
   if(size == 0){
@@ -74,7 +74,7 @@ T DoublyLinkedList<T>::removeFront(){
 }
 
 template <class T>
-T DoublyLinkedList<T>::getFront(){
+T DoublyLinkedList<T>::rFront(){
   return front->data;
 }
 
