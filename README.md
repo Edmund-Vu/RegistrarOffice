@@ -16,6 +16,14 @@ Assignment 4 - Registrar's Office Simulation
 
 - http://www.cplusplus.com/reference/sstream/stringstream/
 
+- https://stackoverflow.com/questions/15031803/c-invalid-pointer-error
+
+- http://cplusplus.com/forum/unices/32452/
+
+- https://stackoverflow.com/questions/30451391/c-error-in-free-invalid-pointer
+
+- https://www.daniweb.com/programming/software-development/threads/114696/free-invalid-pointer-error-help
+
 #Execution:
 
 1. cd into the folder with the files
