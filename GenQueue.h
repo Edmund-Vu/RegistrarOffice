@@ -8,7 +8,6 @@ class GenQueue{
     int numElements;
     ListNode<T> *front;
     ListNode<T> *rear;
-    char *myQueue;
 
     GenQueue();
     ~GenQueue();
@@ -33,7 +32,7 @@ GenQueue<T>::GenQueue(){
 
 template <class T>
 GenQueue<T>::~GenQueue(){
-  delete myQueue;
+  
 }
 
 template <class T>
