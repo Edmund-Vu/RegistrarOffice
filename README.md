@@ -31,5 +31,5 @@ Assignment 4 - Registrar's Office Simulation
 #Execution:
 
 1. cd into the folder with the files
-2. "g++ *.cpp" (compiles an a.out file)
-3. ./a.out
+2. g++ *.cpp
+3. ./a.out example.txt (replace example.txt with appropriately formatted file)
