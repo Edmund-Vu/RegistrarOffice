@@ -1,5 +1,4 @@
 #include <fstream>
-
 #include <algorithm>
 #include <sstream>
 #include "Assignment4.h"
