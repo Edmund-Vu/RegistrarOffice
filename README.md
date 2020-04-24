@@ -24,6 +24,10 @@ Assignment 4 - Registrar's Office Simulation
 
 - https://www.daniweb.com/programming/software-development/threads/114696/free-invalid-pointer-error-help
 
+- https://stackoverflow.com/questions/5134891/how-do-i-use-valgrind-to-find-memory-leaks
+
+- https://github.com/JanitorTechnology/janitor/issues/143
+
 #Execution:
 
 1. cd into the folder with the files
